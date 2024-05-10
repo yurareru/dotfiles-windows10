@@ -4,42 +4,17 @@
 
 ## Installation
 
-### 1. Install [scoop](https://scoop.sh/) first if you haven't
+Install [scoop](https://scoop.sh/) first if you haven't
 
 ```pwsh
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
-```
-
-### 2. Install
-
-```pwsh
-# Add Extras bucket
 scoop bucket add extras
-
-# Install packages
-scoop install glazewm taskbarx winfetch ntop
-
-# Copy configs to user profile folder
-cp -r .config ~
-cp -r .glaze-wm ~
-
-# Install cava
-cp -r cava ~/AppData/Local/Programs
-scoop shim add cava ~/AppData/Local/Programs/cava/cava.exe
+scoop install extras/glazewm
+scoop install extras/taskbarx
+scoop install main/winfetch
+scoop install main/ntop
 ```
 
-### 3. Open `TaskbarX Configurator`
-
-- TaskbarX Configurator
-  - Style
-    - [x] Transparent
-  - Startup
-    - [x] Create
-
-### 4. Open `Taskbar settings`
-
-- Taskbar settings
-  - [x] Use small taskbar buttons
-  - Taskbar location on screen
-    - [x] Top
+- Open `TaskbarX Configurator` then under `Style`, select `Transparent` and under `Startup > Taskschedule`, click `Create` then hit `Apply`.
+- Open `Taskbar settings`, then turn on `Use small taskbar buttons` and set `Taskbar location on screen` to `Top`.
+- Extract `cava.zip` and move it somewhere then add it path to `Environment Variables Path`.
+- Add `Set-Alias neofetch winfetch` to `$PROFILE`
