@@ -18,7 +18,7 @@ Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 scoop bucket add extras
 
 # Install packages
-scoop install glazewm taskbarx winfetch ntop
+scoop install glazewm taskbarx fastfetch
 
 # Copy configs to user profile folder
 cp -r .config ~
